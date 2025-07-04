@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Debajyoti Das | Graphic Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #2a0845, #1f1c2c 60%, #0d0d0d 100%), 
+              url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat;
+  color: #eee;
+  overflow-x: hidden;
+}
+
+    header {
+      background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d2?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      color: white;
+      padding: 6rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      animation: slideIn 1s ease-in-out;
+    }
+    header p {
+      font-size: 1.4rem;
+      color: #ddd;
+      animation: fadeIn 2s ease;
+    }
+    section {
+      padding: 5rem 2rem;
+      max-width: 1300px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: sectionFade 1s ease forwards;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .grid img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+    }
+    .experience, .dynamic-section, .contact {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      margin-top: 3rem;
+    }
+    .experience h3, .dynamic-section h2, .contact h2 {
+      color: #ffcc00;
+    }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .skill-item {
+      width: 120px;
+      text-align: center;
+      background: #292d3e;
+      border-radius: 12px;
+      padding: 1rem;
+      transition: background 0.3s;
+    }
+    .skill-item:hover {
+      background: #373b4f;
+    }
+    .skill-item img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      background: #111;
+      color: #888;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    a { color: #ffcc00; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes sectionFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      
+    }
+
+      #lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: zoom-out;
+  }
+  #lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
+  }
+  #closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Debajyoti Das</h1>
+  <p>Creative Graphic Designer & Web Designer</p>
+</header>
+
+<section style="animation-delay: 0.3s;">
+  <h2 style="text-align:center; color:#ffcc00;">About Me</h2>
+  <p style="max-width: 900px; margin: 1rem auto; font-size: 1.1rem; text-align: center;">
+    I’m a versatile and passionate designer from Kolkata with a deep understanding of design tools, branding, and digital communication. I craft immersive visuals that convey stories and build connections through design.
+  </p>
+</section>
+
+<section style="animation-delay: 0.5s;">
+  <h2 style="text-align:center; color:#ffcc00;">Skills & Tools</h2>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png" alt="Photoshop">
+      <p>Photoshop</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888861.png" alt="Illustrator">
+      <p>Illustrator</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://s.w.org/style/images/about/WordPress-logotype-wmark.png" alt="WordPress">
+      <p>WordPress</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://wordune.com/wp-content/uploads/2022/08/wordune-elementor-wordpress-300x300.png" alt="Elementor">
+      <p>Elementor</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://calhoun.edu/wp-content/uploads/2024/08/Canvas-logo-stacked.png" alt="Canvas LMS">
+      <p>Canvas LMS</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Microsoft_Office_logo_%282013%E2%80%932019%29.svg/648px-Microsoft_Office_logo_%282013%E2%80%932019%29.svg.png" alt="MS Office">
+      <p>MS Office Suite</p>
+    </div>
+  </div>
+</section>
+
+<section style="animation-delay: 0.7s;">
+  <h2 style="text-align:center; color:#ffcc00;">Experience</h2>
+  <div class="experience">
+    <h3>Linkstrat Business Solutions Pvt. Ltd<br><span style="font-size: 0.9rem; color: #ccc;">2024 – Present</span></h3>
+    <p>Crafted social media creatives, banners, and content for web & LMS platforms.</p>
+
+    <h3>Freelance Graphic Designer<br><span style="font-size: 0.9rem; color: #ccc;">2022 – 2024</span></h3>
+    <p>Delivered logos, campaigns, and custom graphics to startups and brands.</p>
+
+    <h3>Bootees.in<br><span style="font-size: 0.9rem; color: #ccc;">2018 – 2019</span></h3>
+    <p>Led a small creative team and designed t-shirt and merchandise graphics.</p>
+  </div>
+</section>
+
+<section style="animation-delay: 0.9s;">
+  <h2 style="text-align:center; color:#ffcc00;">My Work</h2>
+  <div class="grid">
+      <img src="Digital Portfolio/!080x1080 Aurora.jpg" alt="Aurora Design" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/1.png" alt="Creative Art 1" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/1080x1080 PSS.jpg" alt="PSS Banner" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/1080x1080.jpg" alt="Poster Design" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/Aurora 17-7-24.jpg" alt="Aurora Campaign" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/CNC Canada Day 1080x1080.jpg" alt="CNC Canada Day" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/EPR canada day1080 x 1080.jpg" alt="EPR Canada Day" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/FOR CNC.jpg" alt="FOR CNC Design" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/HCMS 1080x1080.jpg" alt="HCMS Promo" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/Indegenous Day IBS June 21,2025 _1080x1080.jpg" alt="Indigenous Day IBS" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/Yoga Day HCMS_June 21,2025_1080x1080.jpg" alt="Yoga Day HCMS" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/linkstratglobal.com_.png" alt="Company website" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/linkstrat.in_.png" alt="Company website" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/auroraconstruction.ca_.png" alt="Company website" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/hcmsolution.com_.png" alt="Company website" onclick="openLightbox(this.src)" />
+    <img src="Digital Portfolio/preventivesecurity.ca_.png" alt="Company website" onclick="openLightbox(this.src)" />
+  </div>
+</section>
+
+<!-- Lightbox Popup -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span id="closeBtn">&times;</span>
+  <img id="lightbox-img" src="" alt="Preview">
+</div>
+
+<section class="contact" style="animation-delay: 1.3s;">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:debjitdas751@gmail.com">debjitdas751@gmail.com</a></p>
+  <p>Phone: +91 8777242667</p>
+  <p>Location: Kolkata, India</p>
+</section>
+
+<section style="animation-delay: 1.2s;">
+  <h2 style="text-align:center; color:#ffcc00;">My Resume</h2>
+  <div class="experience" style="text-align: center;">
+    <p>You can view or download my resume using the link below:</p>
+    <a href="Digital Portfolio/Debajyoti Das Resume.pdf" target="_blank" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #ffcc00; color: #1c1e26; border-radius: 8px; font-weight: bold;">View Resume</a>
+  </div>
+</section>
+<footer>
+  &copy; 2025 Debajyoti Das — All rights reserved.
+</footer>
+<script>
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
+</body>
+</html>
